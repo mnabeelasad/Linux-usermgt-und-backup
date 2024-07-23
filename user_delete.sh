@@ -4,7 +4,7 @@ delete_user(){
         echo "We are deleting the user"
         read -p "Enter the username for delete:" username
         if id "$username" &/dev/null; then
-                echo "This user does not exist"
+                echo "This user does not exist... You can try again"
                 read -p "Try different user for deletion" username
                 if id "$username" &/dev/null; then
                         echo "The user is exist"
@@ -14,4 +14,5 @@ delete_user(){
 
 
 }
+
 delete_user
